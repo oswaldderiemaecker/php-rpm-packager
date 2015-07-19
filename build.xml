@@ -3,7 +3,7 @@
 <project name="contexts" default="help">
 
     <target name="install-rpm" description="Install rpm package">
-      <exec command="sudo apt-get update ; sudo apt-get install rpm" />
+      <exec command="sudo apt-get update ; sudo apt-get install -y  rpm" />
     </target>
 
 </project>
