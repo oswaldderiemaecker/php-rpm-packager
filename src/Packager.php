@@ -53,9 +53,9 @@ class Packager {
 
     public function run() {
         if (!is_dir($_SERVER['HOME'].'/rpmbuild/SOURCES'))
-            mkdir($_SERVER['HOME'].'/rpmbuild/SOURCES', 0777);
+            mkdir($_SERVER['HOME'].'/rpmbuild/SOURCES', 0777, true);
         if (!is_dir($_SERVER['HOME'].'/rpmbuild/SPECS'))
-            mkdir($_SERVER['HOME'].'/rpmbuild/SPECS', 0777);
+            mkdir($_SERVER['HOME'].'/rpmbuild/SPECS', 0777, true);
 
         if (file_exists($this->getOutputPath())) {
             $iterator = new DirectoryIterator($this->getOutputPath());
